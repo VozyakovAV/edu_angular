@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html ng-app="myApp">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div ng-controller="phoneController">
+    <p>Количество элементов: <span ng-bind="phones.length" /></p>
+    <ul >
+        <li ng-repeat="phone in phones"><span ng-bind-template="{{phone.name}}: {{phone.price}} $"></span></li>
+        <li ng-repeat="phone in phones"><span>{{phone.name}}: {{phone.price}} $</span></li>
+    </ul>
+
+    <input type="text" ng-model="value" />
+    <p>{{value}}</p>
+
+    <p>{{1 + 2}}</p>
+    <p ng-non-bindable>{{1 + 2}}</p>
+</div>
+<script src="js/lib/angular.min.js"></script>
+<script type="text/javascript">
+angular.module('myApp', []);
+</script>
+<script src="js/controllers/phonesController.js"></script>
+</body>
+</html>

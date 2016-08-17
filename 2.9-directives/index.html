@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/mystyles.css" />
+</head>
+<body>
+<div ng-controller="phoneController">
+    <ng-include src="'phonesList.html'"></ng-include>
+</div>
+<script src="js/lib/angular.min.js"></script>
+<script type="text/javascript">
+var myApp = angular.module('myApp', []);
+</script>
+<script src="js/controllers/phonesController.js"></script>
+</body>
+</html>
